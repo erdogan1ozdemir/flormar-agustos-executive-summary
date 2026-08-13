@@ -26,7 +26,7 @@ flormar.com.tr için hazırlanan konsolide SEO ve GEO durum değerlendirmesi.
 |---|---|
 | `index.html` | Tek sayfalık rapor. Tıklanabilir bölüm navigasyonu; her terim ve metrikte hover veya tek dokunuşla açılan açıklama kutusu; tablo başına kaynak rozeti, Özet tablosunda satır bazında ölçüm aracı logosu; KPI, cluster ve ilk sıra kaybı tablolarında sütun başlığından sıralama; ayrıntı notları açılır bölümlerde. |
 | `Flormar-SEO-Durum-Raporu-Agustos-2026.docx` | Raporun Word sürümü |
-| `Flormar-Teknik-SEO-Audit-12082026.xlsx` | URL bazlı bulgu listeleri ve düzeltme önerileri (13 sayfa) |
+| `Flormar-Teknik-SEO-Audit-12082026.xlsx` | URL bazlı bulgu listeleri ve düzeltme önerileri (14 sayfa) |
 | `fonts/` | Bricolage Grotesque ve Outfit (Inbound rapor tipografisi) |
 | `assets/` | Flormar logosu, Inbound wordmark ve kaynak araç logoları (rapora data URI olarak gömülüdür) |
 
@@ -34,7 +34,7 @@ flormar.com.tr için hazırlanan konsolide SEO ve GEO durum değerlendirmesi.
 
 | Kaynak | Kapsam | Tarih |
 |---|---|---|
-| Screaming Frog SEO Spider | Anasayfadan liste modunda; JavaScript rendering kapalı, sitemap dahil edilmedi. 4.497 URL karşılandı, 734 indekslenebilir HTML sayfa değerlendirildi. | 12 Ağu 2026 |
+| Screaming Frog SEO Spider | Anasayfadan Spider modunda, JavaScript rendering açık. 33.173 adres karşılandı; 2.280 site içi, 1.639 iç HTML, 1.279 indekslenebilir sayfa değerlendirildi. | 12 Ağu 2026 |
 | Ahrefs Site Audit | 3.399 URL, health score 90. URL bazlı bulgu listeleri. | 3 Ağu 2026 |
 | Chrome UX Report | Origin ve URL bazlı saha verisi; 28 günlük 75. persentil ve 26 haftalık seri. | 12 Ağu 2026 |
 | PageSpeed Insights | 5 sayfa tipi, mobil ve masaüstü laboratuvar ölçümü. | 12 Ağu 2026 |
