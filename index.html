@@ -120,6 +120,29 @@ h3.sub:first-of-type{margin-top:6px}
 .filt button:hover{border-color:var(--rose);color:var(--rose-deep)}
 .filt button[aria-pressed="true"]{background:var(--plum);border-color:var(--plum);color:#fff}
 .tbl tr[hidden]{display:none}
+
+/* mobil bölüm menüsü */
+.toc-fab{display:none}
+.toc-sheet{display:none}
+.toc-sheet.open{display:block;position:fixed;inset:0;z-index:9000}
+.toc-sheet__bg{position:absolute;inset:0;background:rgba(42,27,34,.55);backdrop-filter:blur(2px)}
+.toc-sheet__panel{position:absolute;left:0;right:0;bottom:0;max-height:78vh;overflow:auto;
+ background:var(--surface);border-radius:18px 18px 0 0;padding:14px 14px calc(22px + env(safe-area-inset-bottom));
+ box-shadow:0 -12px 40px rgba(20,10,15,.28);animation:sheetUp .22s var(--ease)}
+@keyframes sheetUp{from{transform:translateY(14px);opacity:.4}to{transform:none;opacity:1}}
+@media (prefers-reduced-motion:reduce){.toc-sheet__panel{animation:none}}
+.toc-sheet__panel h4{display:flex;justify-content:space-between;align-items:center;
+ font-family:var(--font-body);font-size:10.5px;font-weight:700;text-transform:uppercase;letter-spacing:.11em;
+ color:var(--ink-3);margin:4px 8px 10px}
+.toc-sheet__panel a{display:flex;align-items:center;gap:10px;padding:11px 12px;border-radius:10px;
+ color:var(--ink-2);font-size:14.5px;font-weight:600;text-decoration:none;border-bottom:1px solid var(--line)}
+.toc-sheet__panel a:last-child{border-bottom:none}
+.toc-sheet__panel a .n{width:23px;height:23px;border-radius:6px;background:var(--surface-2);color:var(--ink-3);
+ font-size:10.5px;font-weight:800;display:grid;place-items:center;flex:none}
+.toc-sheet__panel a.active{background:var(--rose-tint);color:var(--rose-deep)}
+.toc-sheet__panel a.active .n{background:var(--rose);color:#fff}
+.toc-close{border:none;background:var(--surface-2);width:29px;height:29px;border-radius:50%;
+ font-size:17px;line-height:1;color:var(--ink-2);cursor:pointer;font-family:inherit}
 .rowlogo{display:inline-flex;align-items:center;justify-content:center;width:26px;height:26px;
  border-radius:6px;background:var(--surface-2);border:1px solid var(--line);cursor:help}
 .rowlogo img{width:15px;height:15px;object-fit:contain;display:block}
@@ -212,8 +235,14 @@ a:focus-visible,summary:focus-visible{outline:2px solid var(--rose);outline-offs
  .speed .ms{border-left:none;border-top:1px solid var(--line);padding-left:0;padding-top:12px}
  .speed .grid{grid-template-columns:auto repeat(4,minmax(54px,1fr));gap:4px 8px;font-size:.92em}
  .tscroll.tall{max-height:420px}
+ .sidenav{display:none}
+ .toc-fab{display:inline-flex;align-items:center;gap:8px;position:fixed;right:14px;
+  bottom:calc(16px + env(safe-area-inset-bottom));z-index:8000;background:var(--plum);color:#fff;
+  font-family:var(--font-body);font-weight:700;font-size:13.5px;border:none;padding:12px 18px;
+  border-radius:999px;box-shadow:0 8px 24px rgba(20,10,15,.32);cursor:pointer}
+ .toc-fab svg{width:15px;height:15px}
 }
-@media print{.sidenav,#bar{display:none}.layout{grid-template-columns:1fr}.tscroll.tall{max-height:none}details{border:none}}
+@media print{.sidenav,#bar,.toc-fab,.toc-sheet{display:none}.layout{grid-template-columns:1fr}.tscroll.tall{max-height:none}details{border:none}}
 </style>
 <div id="bar"></div>
 <header class="hero"><div class="hwrap">
@@ -254,16 +283,15 @@ a:focus-visible,summary:focus-visible{outline:2px solid var(--rose);outline-offs
  </div></div></div></header>
 <div class="layout"><nav class="sidenav"><h4>RAPOR AKIŞI</h4><div class="toc">
 <a href="#ozet"><span class="n">01</span><span>Özet</span></a>
-<a href="#teknik"><span class="n">02</span><span>Teknik SEO</span></a>
-<a href="#hiz"><span class="n">03</span><span>Site hızı</span></a>
-<a href="#kategori-url"><span class="n">04</span><span>Kategori URL denetimi</span></a>
-<a href="#siralama"><span class="n">05</span><span>KPI sıralamaları</span></a>
-<a href="#kategori"><span class="n">06</span><span>Kategori ve rakip</span></a>
-<a href="#kayip"><span class="n">07</span><span>İlk sıra kayıpları</span></a>
-<a href="#gap"><span class="n">08</span><span>Content gap</span></a>
+<a href="#hiz"><span class="n">02</span><span>Site hızı</span></a>
+<a href="#kategori-url"><span class="n">03</span><span>Kategori URL denetimi</span></a>
+<a href="#siralama"><span class="n">04</span><span>KPI sıralamaları</span></a>
+<a href="#kategori"><span class="n">05</span><span>Kategori ve rakip</span></a>
+<a href="#kayip"><span class="n">06</span><span>İlk sıra değişimi</span></a>
+<a href="#gap"><span class="n">07</span><span>Content gap</span></a>
+<a href="#teknik"><span class="n">08</span><span>Teknik SEO</span></a>
 <a href="#geo"><span class="n">09</span><span>GEO / AI görünürlük</span></a>
-<a href="#oncelik"><span class="n">10</span><span>Öncelik sırası</span></a>
-<a href="#yontem"><span class="n">11</span><span>Yöntem ve sözlük</span></a>
+<a href="#yontem"><span class="n">10</span><span>Yöntem ve sözlük</span></a>
 </div><div class="ft"><svg width="125" height="30" viewBox="0 0 125 30" fill="#E45A80" xmlns="http://www.w3.org/2000/svg">
   <path fill-rule="evenodd" clip-rule="evenodd" d="M12.4306 11.5912C10.9012 11.5912 9.66101 12.8314 9.66101 14.3602C9.66101 15.8884 10.9012 17.128 12.4306 17.128C13.9594 17.128 15.199 15.8884 15.199 14.3602C15.199 12.8314 13.9594 11.5912 12.4306 11.5912Z"/>
   <path fill-rule="evenodd" clip-rule="evenodd" d="M45.9779 18.6533V28.5017L49.8449 28.5011V18.6533C49.8449 15.7475 52.2089 13.3841 55.1147 13.3835V9.51654C50.0765 9.51714 45.9779 13.6157 45.9779 18.6533Z"/>
@@ -310,7 +338,7 @@ a:focus-visible,summary:focus-visible{outline:2px solid var(--rose);outline-offs
 <details><summary>Öne çıkan hareketler<span class="hint"><span class="lbl-open">Ayrıntıyı aç</span><span class="lbl-close">Kapat</span><svg class="chev" width="11" height="7" viewBox="0 0 11 7" fill="none" aria-hidden="true"><path d="M1 1L5.5 5.5L10 1" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></span></summary><div class="dc"><p><b>İyileşen:</b> likit far 15 → 7 · göz farı 5 → 1 · lip balm 6 → 2 · ruj 3 → 1 · far paleti 4 → 2 · highlighter 6 → 4.</p><p><b>Gerileyen:</b> makyaj malzemeleri 7 → 26 · makyaj fırçası 5 → 11 · dudak balmı 3 → 8 · allık 2 → 6 · fondöten 3 → 7 · pudra 3 → 7.</p><p><b>Takip derinliği dışında kalan:</b> bb krem, cc krem, hediye setleri, kore makyajı.</p></div></details>
 </section>
 <section id="kategori"><h2><span class="sn">05</span>Kategori ve rakip</h2>
-<p class="lede">Kategori grupları ve rakip <span class="tt" data-tip="Takip edilen kelime setinde tahmini trafiğin domainler arasındaki dağılım payı.">Share of Voice</span> değişimi.</p>
+<p class="lede">Kategori grupları ile rakip tıklama payı ve görünürlük karşılaştırması.</p>
 <div class="tw"><div class="srcbar"><a class="sb" href="https://www.seomonitor.com" target="_blank" rel="noopener" title="SEOmonitor kaynağına git"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAMAAACdt4HsAAAAKlBMVEVHcEw0NDRWVlbY2Nhubm6IiIg9PT1MTEyjo6P///8AAAAmJiYbGxsPDw/GVDaGAAAACnRSTlMA7p4XeEvavDAJ8kJwuAAAARVJREFUWIXtl0kShCAMABNAXJD/f3dYRgeQMGJOVsFNi24JpggBACnQPBooJLgx7dvjsU/u+wzeGSQIDr9tApAnQDA8gRmCIRiC1wp0fgJ1CzSA4gjQH8OpoVOAq+NlivQJrnyfwPg6suancI+gxjcFWHwr1LGyCjQELuB0tlk8ry/LIgU6n7/XeVoQeID5D08KZoDU4Kvwz3ZDIOAcPvUtyROCyOsYhmrxdYGCb8Ah80CpYyX3BDbMjwmDMo3kniCu90h4I9v8VRD3eznfxv+nSo4UxHxbknuTN9J8KTCVe5udGnwhiHumbD6neGwJRDve/wKfwZ3XvnIT595r4xsr0xAMwRAQAnbbx2482a0vu/nmtv8f72iYKNiaBIIAAAAASUVORK5CYII=" alt=""><span>SEOmonitor</span></a></div><div class="tscroll"><table class="tbl"><thead><tr><th class="">Kategori</th><th class="c"><span class="tt" tabindex="0" data-tip="Gruptaki takip edilen kelime sayısı.">Kelime</span></th><th class="c"><span class="tt" tabindex="0" data-tip="Kelimenin Türkiye&#x27;deki ortalama aylık arama hacmi.">Search Volume</span></th><th class="c"><span class="tt" tabindex="0" data-tip="Takip edilen kelime setinde toplam arama görünürlüğünü 0-100 aralığında özetleyen skor. Sıralama ve arama hacmi birlikte ağırlıklandırılır.">Visibility (mobile)</span></th><th class="c"><span class="tt" tabindex="0" data-tip="12 Tem 2026 ile 11 Ağu 2026 arasındaki değişim. Sıralamada pozitif değer iyileşmeyi gösterir.">Δ 30 gün</span></th><th class="c"><span class="tt" tabindex="0" data-tip="Gruptaki kelimelerin ortalama sıralama konumu. Değer düştükçe konum iyileşir.">Ort. sıra</span></th><th class="c"><span class="tt" tabindex="0" data-tip="Google arama sonuç sayfasının üstünde çıkan yapay zeka özet yanıtı.">AI Overview</span></th><th class="c"><span class="tt" tabindex="0" data-tip="SEOmonitor opportunity skoru: 0-10 aralığında, mevcut konumla ulaşılabilir konum arasındaki fark. Yükseldikçe kapatılabilir açık büyür.">Fırsat</span></th></tr></thead><tbody><tr><td class="">Tırnak Makyajı</td><td class="c">60</td><td class="c">60.420</td><td class="c"><span class="pos">88.9</span></td><td class="c"><span class="up">+2.1</span></td><td class="c">6.8</td><td class="c">8 / 25</td><td class="c"><span class="num">1.8</span></td></tr><tr><td class="">Dudak Makyajı</td><td class="c">131</td><td class="c">144.460</td><td class="c"><span class="pos">74.5</span></td><td class="c"><span class="up">+1.5</span></td><td class="c">7.2</td><td class="c">9 / 23</td><td class="c"><span class="num">4.2</span></td></tr><tr><td class="">Göz Makyajı</td><td class="c">87</td><td class="c">153.050</td><td class="c"><span class="pos">70.7</span></td><td class="c"><span class="dn">-1.3</span></td><td class="c">6.3</td><td class="c">8 / 21</td><td class="c"><span class="num">4.2</span></td></tr><tr><td class="">Yüz Makyajı</td><td class="c">164</td><td class="c">226.010</td><td class="c"><b class="num">53.6</b></td><td class="c"><span class="dn">-4.3</span></td><td class="c">19.2</td><td class="c">11 / 71</td><td class="c"><span class="num">4.6</span></td></tr><tr><td class="">Aksesuar</td><td class="c">75</td><td class="c">128.890</td><td class="c"><span class="zero">27.4</span></td><td class="c"><span class="dn">-0.2</span></td><td class="c">35.4</td><td class="c">1 / 15</td><td class="c"><span class="warn">6.7</span></td></tr><tr><td class="">Cilt &amp; Vücut Bakımı</td><td class="c">14</td><td class="c">17.130</td><td class="c"><span class="zero">13.4</span></td><td class="c"><span class="dn">-2.6</span></td><td class="c">72.1</td><td class="c">0 / 7</td><td class="c"><span class="warn">7.3</span></td></tr></tbody></table></div></div>
 <p class="src">Kaynak: SEOmonitor grup verileri · 11 Ağu 2026</p>
 <div class="ins"><span class="ar">➔</span><b>Tırnak Makyajı</b> 88.9 ile en güçlü konumdadır. <b>Aksesuar</b> 128.890 aylık aramaya rağmen 27.4, <b>Cilt ve Vücut Bakımı</b> 17.130 aramaya rağmen 13.4 görünürlüktedir; ikisi de en yüksek fırsat skorunu taşımaktadır.</div>
@@ -407,6 +435,13 @@ a:focus-visible,summary:focus-visible{outline:2px solid var(--rose);outline-offs
 <a href="Flormar-SEO-Durum-Raporu-Agustos-2026.docx">Word sürümü</a> ·
 <a href="Flormar-Teknik-SEO-Audit-12082026.xlsx">Teknik audit Excel</a></p></div>
 </div></footer>
+<button class="toc-fab" id="tocFab" aria-haspopup="dialog" aria-expanded="false">
+<svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true">
+<path d="M2 4h12M2 8h12M2 12h12"/></svg>Bölümler</button>
+<div class="toc-sheet" id="tocSheet" role="dialog" aria-modal="true" aria-label="Bölümler">
+<div class="toc-sheet__bg" data-tocclose></div>
+<div class="toc-sheet__panel"><h4>Rapor akışı<button class="toc-close" data-tocclose aria-label="Kapat">&times;</button></h4>
+<div id="tocLinks"></div></div></div>
 <div id="tipbox" role="tooltip"></div>
 <script>
 (function(){
@@ -475,6 +510,39 @@ a:focus-visible,summary:focus-visible{outline:2px solid var(--rose);outline-offs
  document.addEventListener('keydown',function(ev){ if(ev.key==='Escape') hide(true); });
  addEventListener('scroll',function(){ if(cur) hide(true); },true);
  addEventListener('resize',function(){ if(cur) hide(true); });
+
+ /* --- mobil bölüm menüsü --- */
+ (function(){
+   var fab=document.getElementById('tocFab'), sheet=document.getElementById('tocSheet'),
+       box=document.getElementById('tocLinks');
+   if(!fab||!sheet||!box) return;
+   box.innerHTML=[].slice.call(document.querySelectorAll('.sidenav a'))
+     .map(function(a){return a.outerHTML;}).join('');
+   function open(){
+     [].slice.call(box.querySelectorAll('a')).forEach(function(a,i){
+       a.classList.toggle('active', links[i] && links[i].classList.contains('active'));
+     });
+     sheet.classList.add('open'); fab.setAttribute('aria-expanded','true');
+     document.body.style.overflow='hidden';
+   }
+   function close(){
+     sheet.classList.remove('open'); fab.setAttribute('aria-expanded','false');
+     document.body.style.overflow='';
+   }
+   fab.addEventListener('click', open);
+   [].slice.call(sheet.querySelectorAll('[data-tocclose]')).forEach(function(el){
+     el.addEventListener('click', close);
+   });
+   box.addEventListener('click', function(ev){
+     var a=ev.target.closest('a'); if(!a) return;
+     ev.preventDefault(); close();
+     var el=document.getElementById(a.getAttribute('href').slice(1));
+     if(el) el.scrollIntoView({behavior:'smooth',block:'start'});
+   });
+   document.addEventListener('keydown', function(ev){
+     if(ev.key==='Escape' && sheet.classList.contains('open')) close();
+   });
+ })();
 
  /* --- marka / marka dışı filtresi --- */
  [].slice.call(document.querySelectorAll('.filt')).forEach(function(bar){
