@@ -13,7 +13,7 @@
 
 :root{
  --rose:#E45A80; --rose-tint:#FDEAF0; --rose-deep:#C13A62;
- --coral:#FF7B52; --coral-deep:#E85F36;
+ --coral:#FF7B52; --coral-deep:#E85F36; --teal:#10332F; --teal-soft:#1C4A44;
  --plum:#2A1B22; --plum-deep:#1C1116; --plum-soft:#3D2831;
  --ink:#241A1E; --ink-2:#5C4A52; --ink-3:#948289;
  --line:#E6E2E4; --line-soft:#F2EFF1; --surface:#FFFFFF; --bg:#EEE9EB; --row-alt:#FAF8F9;
@@ -45,24 +45,32 @@ h1,h2,h3{font-family:var(--font-display);letter-spacing:-.01em}
 .hero-top .ib{display:flex;align-items:center;gap:9px}
 .hero-top .ib img{height:16px;width:auto;opacity:.92}
 .hero-top .ib span{font-size:9px;letter-spacing:.13em;color:rgba(255,255,255,.45);font-weight:600}
-.kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(168px,1fr));gap:11px}
+.kpis{display:grid;grid-template-columns:repeat(6,1fr);gap:11px}
+.kpi.a{grid-column:span 2}
+.kpi.b{grid-column:span 3}
+@media (max-width:1080px){.kpis{grid-template-columns:repeat(3,1fr)}
+ .kpi.a{grid-column:span 1}.kpi.b{grid-column:span 3}}
 .kpi{background:#fff;border-radius:var(--r-lg);box-shadow:var(--shadow-pop);padding:16px 15px;color:var(--ink);
  text-align:center;display:flex;flex-direction:column;align-items:center;justify-content:center}
-.kpi .l3{width:100%}
-.kpi .v{font-family:var(--font-display);font-weight:800;font-size:clamp(24px,2.5vw,31px);line-height:1.05;color:var(--plum)}
+.kpi .l3{width:100%;max-width:290px;margin-left:auto;margin-right:auto}
+.kpi .v{font-family:var(--font-display);font-weight:800;font-size:clamp(26px,2.7vw,34px);line-height:1.05;color:var(--plum)}
+.kpi.a .v{font-size:clamp(30px,3.2vw,40px)}
+.kpi.a .k{font-size:12.5px;margin-top:6px}
+.kpi.a .t{font-size:11px;margin-top:8px;padding:3px 11px}
 .kpi .v small{font-size:.46em;font-weight:600;color:var(--ink-3)}
 .kpi.good .v{color:var(--green)}
-.kpi .k{font-size:11px;color:var(--ink-2);margin-top:4px;line-height:1.35}
+.kpi .k{font-size:11.5px;color:var(--ink-2);margin-top:5px;line-height:1.35}
+.kpi .k .tt{border-bottom:1px dotted var(--rose);cursor:help}
 .kpi .t{display:inline-block;margin-top:6px;font-size:10px;font-weight:600;padding:2px 9px;border-radius:var(--r-pill);background:var(--rose-tint);color:var(--rose-deep)}
 .kpi .l3{margin-top:8px;padding-top:7px;border-top:1px solid var(--line);font-size:10px;line-height:1.6;color:var(--ink-3)}
 .kpi .l3 i{display:block;font-style:normal;font-weight:700;font-size:9px;letter-spacing:.07em;
  text-transform:uppercase;color:var(--ink-3);margin-bottom:3px;text-align:center}
-.kpi .l3 .r{display:flex;align-items:center;gap:5px;justify-content:flex-start;padding:1px 0}
+.kpi .l3 .r{display:flex;align-items:center;gap:6px;justify-content:flex-start;padding:2px 0;font-size:11px}
 .kpi .l3 .r .no{width:12px;flex:none;color:var(--ink-3);font-variant-numeric:tabular-nums}
 .kpi .l3 .r .nm{flex:1;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
 .kpi .l3 .r em{font-style:normal;margin-left:auto;flex:none;font-variant-numeric:tabular-nums}
 .kpi .l3 .r.me .nm,.kpi .l3 .r.me em{font-weight:700;color:var(--plum)}
-.kpi .l3 .lgo{width:13px;height:13px;flex:none;background-repeat:no-repeat;background-position:center;background-size:contain}
+.kpi .l3 .lgo{width:15px;height:15px;flex:none;background-repeat:no-repeat;background-position:center;background-size:contain}
 .speed{background:#fff;border-radius:var(--r-lg);box-shadow:var(--shadow-pop);margin-top:11px;padding:15px 17px;
  display:grid;grid-template-columns:minmax(150px,196px) 1fr;gap:18px;align-items:center;color:var(--ink)}
 .speed .hd{text-align:center;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:3px}
@@ -85,12 +93,14 @@ h1,h2,h3{font-family:var(--font-display);letter-spacing:-.01em}
 .sidenav a{display:flex;align-items:center;gap:11px;padding:9px 12px;border-radius:10px;color:var(--ink-2);
  font-family:var(--font-display);font-size:14.5px;font-weight:600;line-height:1.3;letter-spacing:-.008em;text-decoration:none;transition:background .18s var(--ease),color .18s var(--ease)}
 .sidenav a:hover{background:var(--rose-tint);color:var(--rose-deep)}
-.sidenav a.active{background:var(--plum);color:#fff}
-.sidenav a.active .n{background:var(--rose);color:#fff}
+.sidenav a.active{background:var(--teal);color:#fff}
+.sidenav a.active .n{background:rgba(255,255,255,.22);color:#fff}
 .sidenav a .n{width:26px;height:26px;border-radius:7px;background:var(--line-soft);color:var(--ink-3);
  font-size:11px;font-weight:800;font-family:var(--font-display);display:grid;place-items:center;flex:none}
-.sidenav .ft{margin-top:9px;padding:9px 8px 2px;border-top:1px solid var(--line-soft)}
+.sidenav .ft{margin-top:9px;padding:10px 8px 2px;border-top:1px solid var(--line-soft);
+ display:flex;align-items:center;justify-content:space-between;gap:10px}
 .sidenav .ft svg{height:13px;width:auto;opacity:.9}
+.sidenav .ft .ib{height:12px;width:auto;opacity:.85}
 main{display:flex;flex-direction:column;gap:22px;min-width:0}
 section{scroll-margin-top:16px;background:var(--surface);border:1px solid var(--line);
  border-radius:var(--r-lg);padding:26px 28px 28px;box-shadow:var(--shadow-card)}
@@ -117,11 +127,11 @@ a.sb:hover{border-color:var(--rose);color:var(--rose-deep)}
 .tscroll{overflow-x:auto;background:var(--surface);border:1px solid var(--line);border-radius:var(--r-md)}
 .tscroll.tall{max-height:530px;overflow-y:auto}
 .tbl{width:100%;border-collapse:collapse;font-size:12.5px;min-width:560px}
-.tbl tbody tr:nth-child(even):not(.grp):not(.tot){background:var(--row-alt)}
+.tbl tbody tr:nth-child(even):not(.grp):not(.tot){background:#F5F8F7}
 .tbl th{font-size:10.5px;letter-spacing:.07em;color:#fff;text-align:left;padding:10px 10px;
- border-bottom:none;font-weight:700;white-space:nowrap;background:var(--coral);position:sticky;top:0;z-index:3}
+ border-bottom:none;font-weight:700;white-space:nowrap;background:var(--teal);position:sticky;top:0;z-index:3}
 .tbl th .tt{border-bottom-color:rgba(255,255,255,.45)}
-.tbl th.so:hover{color:#FFF1EC}
+.tbl th.so:hover{color:#9FD8CF}
 .tbl th.so::after{border-top-color:rgba(255,255,255,.42)}
 .tbl th.so.asc::after{border-bottom-color:#fff}
 .tbl th.so.desc::after{border-top-color:#fff}
@@ -178,8 +188,8 @@ a.klink:hover{border-bottom-style:solid}
 .toc-sheet__panel a:last-child{border-bottom:none}
 .toc-sheet__panel a .n{width:23px;height:23px;border-radius:6px;background:var(--surface-2);color:var(--ink-3);
  font-size:10.5px;font-weight:800;display:grid;place-items:center;flex:none}
-.toc-sheet__panel a.active{background:var(--rose-tint);color:var(--rose-deep)}
-.toc-sheet__panel a.active .n{background:var(--rose);color:#fff}
+.toc-sheet__panel a.active{background:var(--teal);color:#fff}
+.toc-sheet__panel a.active .n{background:rgba(255,255,255,.22);color:#fff}
 .toc-close{border:none;background:var(--surface-2);width:29px;height:29px;border-radius:50%;
  font-size:17px;line-height:1;color:var(--ink-2);cursor:pointer;font-family:inherit}
 .rowlogo{display:inline-flex;align-items:center;justify-content:center;width:26px;height:26px;
@@ -299,6 +309,14 @@ a:focus-visible,summary:focus-visible{outline:2px solid var(--rose);outline-offs
  .speed .grid{grid-template-columns:auto repeat(4,minmax(54px,1fr));gap:4px 8px;font-size:.92em}
  .tscroll.tall{max-height:420px}
  .sidenav{display:none}
+ .kpis{grid-template-columns:repeat(3,1fr);gap:8px}
+ .kpi.a{grid-column:span 1;padding:13px 8px}
+ .kpi.b{grid-column:span 3}
+ .kpi.a .v{font-size:clamp(21px,6.4vw,28px)}
+ .kpi.a .k{font-size:10.5px}
+ .kpi.a .t{font-size:9.5px;padding:2px 8px}
+ .kpi.b:nth-of-type(4){order:2}
+ .kpi.b:nth-of-type(5){order:1}
  .hero-top{display:grid;grid-template-columns:1fr auto;align-items:center;row-gap:9px;padding:14px 0}
  .hero-top .lf{display:contents}
  .hero-top .lf svg{grid-column:1;grid-row:1}
@@ -331,11 +349,11 @@ a:focus-visible,summary:focus-visible{outline:2px solid var(--rose);outline-offs
 </div>
 <h1 class="vh">Flormar Ağustos 2026 SEO ve GEO durum raporu</h1>
 <div class="kpis">
-<div class="kpi " data-tip="SEOmonitor · 46 KPI kelimesi · mobil · 11 Ağu 2026. Kelime setinde toplam arama görünürlüğünü 0-100 aralığında özetler." tabindex="0"><div class="v">61.6</div><div class="k">Keyword Visibility</div><div class="t">30 gün -7.4</div></div>
-<div class="kpi " data-tip="SEOmonitor · 599 takip kelimesi · mobil · 11 Ağu 2026. Tahmini organik tıklamanın domainler arasındaki dağılım payı; 843 domain içinde 4. sıra. Görünürlük skorundan farklıdır, tıklama tabanlıdır." tabindex="0"><div class="v">%8.7</div><div class="k">Organic Share of Clicks</div><div class="t">4. sıra</div><div class="l3"><i>İlk 3</i><div class="r"><span class="no">1</span><span class='lgo bl-gratis-com'></span><span class="nm">gratis.com</span><em>%15.9</em></div><div class="r"><span class="no">2</span><span class='lgo bl-trendyol-com'></span><span class="nm">trendyol.com</span><em>%15.3</em></div><div class="r"><span class="no">3</span><span class='lgo bl-watsons-com-tr'></span><span class="nm">watsons.com.tr</span><em>%10.2</em></div></div></div>
-<div class="kpi good" data-tip="SEOmonitor · 46 KPI kelimesi · mobil · 11 Ağu 2026. Mobilde ilk 10 içinde konum alan kelime sayısı." tabindex="0"><div class="v">34<small>/46</small></div><div class="k">KPI kelimede ilk 10</div><div class="t">%74</div></div>
-<div class="kpi good" data-tip="SEOmonitor · 599 takip kelimesi · mobil. 11 Ağu 2026 tarihinde 1. sırada bulunan kelime sayısı; karşılaştırma 11 May 2026." tabindex="0"><div class="v">93</div><div class="k">İlk sıradaki kelime</div><div class="t">Mayıs: 68</div></div>
-<div class="kpi good" data-tip="Inbound AI görünürlük izleme · 100 aktif prompt · ChatGPT ve Gemini · 1-12 Ağu 2026. Taranan yanıtlarda marka ve rakip anılmalarının dağılımı; Flormar 159 anılmayla ilk sıradadır." tabindex="0"><div class="v">%26.9</div><div class="k">AI Search SoV</div><div class="t">Kategoride 1.</div><div class="l3"><i>İlk 3</i><div class="r me"><span class="no">1</span><span class='lgo bl-flormar-com-tr'></span><span class="nm">Flormar</span><em>%26.9</em></div><div class="r"><span class="no">2</span><span class='lgo bl-maybelline-com-tr'></span><span class="nm">Maybelline</span><em>%21.7</em></div><div class="r"><span class="no">3</span><span class='lgo bl-goldenrose-com-tr'></span><span class="nm">Golden Rose</span><em>%18.1</em></div></div></div>
+<div class="kpi a"><div class="v">61.6</div><div class="k"><span class="tt" tabindex="0" data-tip="SEOmonitor · 46 KPI kelimesi · mobil · 11 Ağu 2026. Kelime setinde toplam arama görünürlüğünü 0-100 aralığında özetler; sıra, tıklama payı ve arama hacmi birlikte ağırlıklandırılır.">Keyword Visibility</span></div><div class="t">30 gün -7.4</div></div>
+<div class="kpi a good"><div class="v">34<small>/46</small></div><div class="k"><span class="tt" tabindex="0" data-tip="SEOmonitor · 46 KPI kelimesi · mobil · 11 Ağu 2026. Mobilde ilk 10 içinde konum alan kelime sayısı.">KPI kelimede ilk 10</span></div><div class="t">%74</div></div>
+<div class="kpi a good"><div class="v">93</div><div class="k"><span class="tt" tabindex="0" data-tip="SEOmonitor · 599 takip kelimesi · mobil. 11 Ağu 2026 tarihinde 1. sırada bulunan kelime sayısı; karşılaştırma 11 May 2026.">İlk sıradaki kelime</span></div><div class="t">Mayıs: 68</div></div>
+<div class="kpi b"><div class="v">%8.7</div><div class="k"><span class="tt" tabindex="0" data-tip="SEOmonitor · 599 takip kelimesi · mobil · 11 Ağu 2026. Tahmini organik tıklamanın domainler arasındaki dağılım payı; 843 domain içinde 4. sıra. Görünürlük skorundan farklıdır, tıklama tabanlıdır.">Organic Share of Clicks</span></div><div class="t">4. sıra</div><div class="l3"><i>İlk 3</i><div class="r"><span class="no">1</span><span class='lgo bl-gratis-com'></span><span class="nm">gratis.com</span><em>%15.9</em></div><div class="r"><span class="no">2</span><span class='lgo bl-trendyol-com'></span><span class="nm">trendyol.com</span><em>%15.3</em></div><div class="r"><span class="no">3</span><span class='lgo bl-watsons-com-tr'></span><span class="nm">watsons.com.tr</span><em>%10.2</em></div></div></div>
+<div class="kpi b good"><div class="v">%26.9</div><div class="k"><span class="tt" tabindex="0" data-tip="Inbound AI görünürlük izleme · 100 aktif prompt · ChatGPT ve Gemini · 1-12 Ağu 2026. Taranan yanıtlarda marka ve rakip anılmalarının dağılımı; Flormar 159 anılmayla ilk sıradadır.">AI Search SoV</span></div><div class="t">Kategoride 1.</div><div class="l3"><i>İlk 3</i><div class="r me"><span class="no">1</span><span class='lgo bl-flormar-com-tr'></span><span class="nm">Flormar</span><em>%26.9</em></div><div class="r"><span class="no">2</span><span class='lgo bl-maybelline-com-tr'></span><span class="nm">Maybelline</span><em>%21.7</em></div><div class="r"><span class="no">3</span><span class='lgo bl-goldenrose-com-tr'></span><span class="nm">Golden Rose</span><em>%18.1</em></div></div></div>
 </div>
 <div class="speed">
  <div class="hd"><div class="lbl">Google PageSpeed · Core Web Vitals</div><div class="val">Geçmedi</div>
@@ -371,7 +389,7 @@ a:focus-visible,summary:focus-visible{outline:2px solid var(--rose);outline-offs
   <path fill-rule="evenodd" clip-rule="evenodd" d="M33.4785 25.6985C30.1521 25.6985 27.4467 22.9931 27.4467 19.6673C27.4467 16.3415 30.1521 13.6355 33.4785 13.6355C36.8043 13.6349 39.5109 16.3409 39.5109 19.6667C39.5109 22.9925 36.8043 25.6985 33.4785 25.6985ZM33.4785 9.76848C28.0197 9.76908 23.5791 14.2097 23.5791 19.6679C23.5791 25.1255 28.0203 29.5655 33.4785 29.5655C38.9367 29.5649 43.3779 25.1243 43.3779 19.6661C43.3779 14.2085 38.9367 9.76788 33.4785 9.76848Z"/>
   <path fill-rule="evenodd" clip-rule="evenodd" d="M13.0418 0.0770416C8.03661 0.115442 3.97581 4.19784 3.97581 9.21144V12.4532H0.932007V16.3202L3.97581 16.3196V28.4846H7.84281V9.21144C7.84281 6.32964 10.169 3.98244 13.0418 3.94404V0.0770416Z"/>
 </svg>
-</div></nav><main>
+<img class="ib" src="data:image/png;base64,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" alt="Inbound"></div></nav><main>
 <section id="ozet"><h2><span class="sn">01</span>Özet</h2>
 <div class="tw"><div class="srcbar"><a class="sb" href="https://www.seomonitor.com" target="_blank" rel="noopener" title="SEOmonitor kaynağına git"><span class="sblg lg-seomonitor"></span><span>SEOmonitor</span></a><a class="sb" href="https://pagespeed.web.dev" target="_blank" rel="noopener" title="PageSpeed Insights kaynağına git"><span class="sblg lg-psi"></span><span>PageSpeed Insights</span></a><span class="sb" title="Inbound AI izleme"><span class="sblg lg-inbound"></span><span>Inbound AI izleme</span></span></div><div class="tscroll"><table class="tbl"><thead><tr><th class=""><span class="tt" tabindex="0" data-tip="Raporda izlenen ana metrik.">Gösterge</span></th><th class="c"><span class="tt" tabindex="0" data-tip="11 Ağu 2026 itibarıyla ölçülen güncel değer.">Değer</span></th><th class="c"><span class="tt" tabindex="0" data-tip="12 Tem 2026 ile 11 Ağu 2026 arasındaki değişim. Sıralamada pozitif değer iyileşmeyi gösterir.">Δ 30 gün</span></th><th class=""><span class="tt" tabindex="0" data-tip="Değerin bağlamı: karşılaştırma tabanı, kapsam veya sıra bilgisi.">Not</span></th><th class="c"><span class="tt" tabindex="0" data-tip="Değerin ölçüldüğü araç. Logoya tıklandığında araç sayfası açılır.">Kaynak</span></th></tr></thead><tbody><tr><td class=""><span class="tt" tabindex="0" data-tip="Takip edilen 599 kelimenin tamamında mobil arama görünürlüğü. Her kelimenin sırası, o sıranın tıklama payı ve arama hacmi birlikte ağırlıklandırılarak 0-100 aralığına indirgenir.">Keyword Visibility (tüm kelimeler)</span></td><td class="c"><b class="num">54.4</b></td><td class="c"><span class="dn">-2.7</span></td><td class="">599 takip kelimesi · mobil</td><td class="c"><a class="rowlogo lg lg-seomonitor" href="https://www.seomonitor.com" target="_blank" rel="noopener" data-tip="SEOmonitor ile ölçülmüştür."></a></td></tr><tr><td class=""><span class="tt" tabindex="0" data-tip="46 KPI kelimesinde mobil arama görünürlüğünü 0-100 aralığında özetleyen skor. Her kelimenin sırası, o sıranın tıklama payı ve arama hacmi birlikte ağırlıklandırılır; ilk sıradaki yüksek hacimli kelime skora en çok katkıyı verir.">Keyword Visibility, KPI kelimeleri</span></td><td class="c"><b class="num">61.6</b></td><td class="c"><span class="dn">-7.4</span></td><td class="">46 kelime</td><td class="c"><a class="rowlogo lg lg-seomonitor" href="https://www.seomonitor.com" target="_blank" rel="noopener" data-tip="SEOmonitor ile ölçülmüştür."></a></td></tr><tr><td class=""><span class="tt" tabindex="0" data-tip="SEOmonitor&#x27;ün tahmini organik tıklama payı: takip edilen 599 kelimede sıralamalar tıklama eğrisiyle tahmini tıklamaya çevrilir, her domainin payı yüzde olarak verilir. Görünürlük skorundan farklıdır; tıklama tabanlıdır.">Organic Share of Clicks</span></td><td class="c"><b class="num">%8.7</b></td><td class="c"><span class="dn">-0.22</span></td><td class="">843 domain içinde 4. sıra</td><td class="c"><a class="rowlogo lg lg-seomonitor" href="https://www.seomonitor.com" target="_blank" rel="noopener" data-tip="SEOmonitor ile ölçülmüştür."></a></td></tr><tr><td class=""><span class="tt" tabindex="0" data-tip="46 KPI kelimesinden mobilde ilk 10 sonuçta yer alanların sayısı.">KPI kelimede ilk 10</span></td><td class="c"><b class="num">34 / 46</b></td><td class="c"><span class="mut">-</span></td><td class="">%74</td><td class="c"><a class="rowlogo lg lg-seomonitor" href="https://www.seomonitor.com" target="_blank" rel="noopener" data-tip="SEOmonitor ile ölçülmüştür."></a></td></tr><tr><td class=""><span class="tt" tabindex="0" data-tip="Takip edilen 599 kelime içinde mobilde 1. sırada yer alınan kelime sayısı.">İlk sırada bulunulan kelime</span></td><td class="c"><b class="num">93</b></td><td class="c"><span class="dn">-2</span></td><td class="">17 kazanım, 19 kayıp · Mayıs 2026: 68</td><td class="c"><a class="rowlogo lg lg-seomonitor" href="https://www.seomonitor.com" target="_blank" rel="noopener" data-tip="SEOmonitor ile ölçülmüştür."></a></td></tr><tr><td class=""><span class="tt" tabindex="0" data-tip="Beş sayfa tipinde mobil ve masaüstü PageSpeed Insights performans skorlarının ortalamasından türetilen düzey. Core Web Vitals eşik değerlendirmesi ise gerçek kullanıcı saha verisiyle yapılır.">Site hızı</span></td><td class="c"><span class="zero">Düşük</span></td><td class="c"><span class="mut">0</span></td><td class="">CLS eşik dışı, diğer üç metrik eşik içinde</td><td class="c"><a class="rowlogo lg lg-psi" href="https://pagespeed.web.dev" target="_blank" rel="noopener" data-tip="PageSpeed Insights ile ölçülmüştür."></a></td></tr><tr><td class=""><span class="tt" tabindex="0" data-tip="ChatGPT ve Gemini üzerinde taranan yanıtlarda marka ve rakip anılmalarının dağılımı. Inbound AI görünürlük izlemesinde 100 aktif prompt üzerinden ölçülür; Google AI Overview bu metriğin dışındadır.">AI Search Share of Voice</span></td><td class="c"><b class="num">%26.9</b></td><td class="c"><span class="mut">-</span></td><td class="">Kategoride 1. sıra · 159 anılma</td><td class="c"><span class="rowlogo lg lg-inbound" data-tip="Inbound AI izleme ile ölçülmüştür."></span></td></tr><tr><td class=""><span class="tt" tabindex="0" data-tip="Google AI Overview yanıtlarında markanın anılma ve kaynak gösterilme payı.">AI Overview Share of Voice</span></td><td class="c"><b class="num">%9.7</b></td><td class="c"><span class="dn">-1.65</span></td><td class="">Kategoride 5. sıra</td><td class="c"><a class="rowlogo lg lg-seomonitor" href="https://www.seomonitor.com" target="_blank" rel="noopener" data-tip="SEOmonitor ile ölçülmüştür."></a></td></tr></tbody></table></div></div>
 <div class="ins"><span class="ar">➔</span><b>Dönemin olumlu tarafı:</b> <span class="tt" data-tip="Takip edilen 599 kelime içinde mobilde 1. sırada yer alınan kelime sayısı.">İlk sırada bulunulan kelime</span> sayısı Mayıs 2026'daki <b>68</b> seviyesinden <b>93</b>'e yükselmiştir. Aynı dönemde <span class="tt" data-tip="Interaction to Next Paint: kullanıcı etkileşimine yanıt verme süresi. Referans eşik 200 ms.">INP</span> <b>-%42</b>, <span class="tt" data-tip="First Contentful Paint: ilk içeriğin ekranda belirme süresi. Referans eşik 1.8 sn.">FCP</span> <b>-%21</b>, <span class="tt" data-tip="Largest Contentful Paint: en büyük içerik öğesinin görünür olma süresi. Referans eşik 2.5 sn.">LCP</span> <b>-%15</b> iyileşmiş ve üç metrik de İyi bandına taşınmıştır. <span class="tt" data-tip="Google arama sonuç sayfasının üstünde çıkan yapay zeka özet yanıtı.">AI Overview</span> yanıtlarında marka anılması <b>124</b> kayıtla takip edilen tüm domainlerin üzerindedir.</div>
