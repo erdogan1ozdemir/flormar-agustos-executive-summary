@@ -40,7 +40,7 @@ flormar.com.tr için hazırlanan konsolide SEO ve GEO durum değerlendirmesi.
 | SEOmonitor | 599 takip kelimesi; mobil 100., masaüstü 20. sıraya kadar. KPI ve kategori grupları, Share of Voice. | 12 Tem ve 11 Ağu 2026 |
 | Ahrefs SERP doğrulaması | 13 kelimede canlı ilk sıra kontrolü. | 12 Ağu 2026 |
 | Google Search Console | Sitemap durumu ve URL denetimi. | 12 Ağu 2026 |
-| Inbound AI görünürlük izleme | 100 aktif prompt; ChatGPT, Gemini ve Google AI Overview üzerinde 505 taranan yanıt. | 1-12 Ağu 2026 |
+| Inbound AI görünürlük izleme | 100 aktif prompt; ChatGPT, Gemini ve Google AI Overview üzerinde 505 taranan yanıt. AI Search Share of Voice bu kaynaktan hesaplanır. | 1-12 Ağu 2026 |
 | Flormar kategori URL listesi | Flormar ekibinin ilettiği 113 adreslik Excel; her adres tek tek çağrılarak HTTP yanıtı ve canonical etiketi doğrulandı. | 13 Ağu 2026 |
 | Doğrudan kontrol | Sunucu HTML'i, robots.txt, llms.txt ve bot erişim testleri. | 12 Ağu 2026 |
 
