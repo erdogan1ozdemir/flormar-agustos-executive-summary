@@ -45,18 +45,31 @@ h1,h2,h3{font-family:var(--font-display);letter-spacing:-.01em}
 .hero-top .ib{display:flex;align-items:center;gap:9px}
 .hero-top .ib img{height:16px;width:auto;opacity:.92}
 .hero-top .ib span{font-size:9px;letter-spacing:.13em;color:rgba(255,255,255,.45);font-weight:600}
-.kpis{display:grid;grid-template-columns:repeat(12,1fr);gap:10px;align-items:stretch}
+.kpis{display:grid;grid-template-columns:repeat(14,1fr);gap:10px;align-items:stretch}
+.kpi.split{grid-column:span 4}
 .kpi.a{grid-column:span 2;padding:20px 14px}
 .kpi.b{grid-column:span 3}
-@media (max-width:1240px){.kpis{grid-template-columns:repeat(6,1fr)}
- .kpi.a{grid-column:span 2;padding:20px 14px}.kpi.b{grid-column:span 3}}
+@media (max-width:1240px){.kpis{grid-template-columns:repeat(8,1fr)}
+ .kpi.split{grid-column:span 4}.kpi.a{grid-column:span 2}.kpi.b{grid-column:span 4}}
 .kpi{background:#fff;border-radius:var(--r-lg);box-shadow:var(--shadow-pop);padding:16px 15px;color:var(--ink);
  text-align:center;display:flex;flex-direction:column;align-items:center;justify-content:center}
 .kpi .l3{width:100%;max-width:260px;margin-left:auto;margin-right:auto}
 .kpi .v{font-family:var(--font-display);font-weight:800;font-size:clamp(23px,2.1vw,30px);line-height:1.05;color:var(--plum)}
 .kpi.a .v{font-size:clamp(32px,3vw,42px)}
-.kpi .v .sep{display:inline-block;margin:0 7px;font-weight:600;color:var(--ink-3);
- font-size:.55em;vertical-align:middle}
+.kpi.split{padding:18px 8px 16px;justify-content:space-between}
+.kpi.split .duo{display:grid;grid-template-columns:1fr 1fr;align-items:stretch;width:100%}
+.kpi.split .duo::before{display:none}
+.kpi.split .half{display:flex;flex-direction:column;align-items:center;justify-content:flex-start;
+ gap:4px;padding:0 10px;min-width:0}
+.kpi.split .half:first-child{border-right:1px solid var(--line)}
+.kpi.split .half .v{font-family:var(--font-display);font-weight:800;
+ font-size:clamp(22px,2vw,30px);line-height:1.05;color:var(--plum);white-space:nowrap}
+.kpi.split .half .sub{font-size:11px;font-weight:600;color:var(--ink-2);letter-spacing:.01em}
+.kpi.split .half .d{font-size:10.5px;font-weight:700;font-variant-numeric:tabular-nums}
+.kpi.split .half .d.dn{color:var(--red)}
+.kpi.split .k{margin-top:12px;padding-top:10px;border-top:1px solid var(--line);width:100%;
+ font-size:13.5px;font-weight:700;color:var(--ink)}
+.kpi.split .k .tt{border-bottom:1px dotted var(--rose);cursor:help}
 .kpi.a .k{font-size:14px;font-weight:600;margin-top:8px}
 .kpi.a .t{font-size:11.5px;margin-top:10px;padding:3px 12px}
 .kpi .v small{font-size:.46em;font-weight:600;color:var(--ink-3)}
@@ -351,6 +364,11 @@ a:focus-visible,summary:focus-visible{outline:2px solid var(--rose);outline-offs
  .tscroll.tall{max-height:420px}
  .sidenav{display:none}
  .kpis{grid-template-columns:repeat(2,1fr);gap:8px}
+ .kpi.split{grid-column:span 2;padding:14px 6px 13px}
+ .kpi.split .half .v{font-size:clamp(22px,6.6vw,30px)}
+ .kpi.split .half .sub{font-size:10.5px}
+ .kpi.split .half .d{font-size:10px}
+ .kpi.split .k{margin-top:10px;padding-top:9px;font-size:12.5px}
  /* sade karoseller: tam genişlikte ince satır blokları */
  .kpi.a{grid-column:span 2;flex-direction:row;align-items:center;justify-content:flex-start;
   text-align:left;gap:11px;padding:11px 14px}
@@ -399,7 +417,7 @@ a:focus-visible,summary:focus-visible{outline:2px solid var(--rose);outline-offs
 </div>
 <h1 class="vh">Flormar Ağustos 2026 SEO ve GEO durum raporu</h1>
 <div class="kpis">
-<div class="kpi a"><div class="v">%61.6<span class="sep">-</span>%54.4</div><div class="k"><span class="tt" tabindex="0" data-tip="SEOmonitor · mobil · 11 Ağu 2026. Soldaki değer 46 KPI kelimesindeki, sağdaki değer takip edilen 599 kelimenin tamamındaki arama görünürlüğüdür. Her kelimenin sırası, o sıranın tıklama payı ve arama hacmi birlikte ağırlıklandırılarak 0-100 aralığına indirgenir.">KPI - Toplam Keyword Visibility</span></div><div class="t">Δ 30 gün -7.4 · -2.7</div></div>
+<div class="kpi split"><div class="duo"><div class="half"><div class="v">%61.6</div><div class="sub">KPI kelimeleri</div><div class="d dn">Δ 30 gün -7.4</div></div><div class="half"><div class="v">%54.4</div><div class="sub">Tüm kelimeler</div><div class="d dn">Δ 30 gün -2.7</div></div></div><div class="k"><span class="tt" tabindex="0" data-tip="SEOmonitor · mobil · 11 Ağu 2026. Kelime setinde toplam arama görünürlüğünü 0-100 aralığında özetleyen skor; her kelimenin sırası, o sıranın tıklama payı ve arama hacmi birlikte ağırlıklandırılır.">Keyword Visibility</span></div></div>
 <div class="kpi a good"><div class="v">34<small>/46</small></div><div class="k"><span class="tt" tabindex="0" data-tip="SEOmonitor · 46 KPI kelimesi · mobil · 11 Ağu 2026. Mobilde ilk 10 içinde konum alan kelime sayısı.">KPI kelimede ilk 10</span></div><div class="t">%74</div></div>
 <div class="kpi a good"><div class="v">93</div><div class="k"><span class="tt" tabindex="0" data-tip="SEOmonitor · 599 takip kelimesi · mobil. 11 Ağu 2026 tarihinde 1. sırada bulunan kelime sayısı; karşılaştırma 11 May 2026.">İlk sıradaki kelime</span></div><div class="t">Mayıs'a göre +25</div></div>
 <div class="kpi b"><div class="v">%8.7</div><div class="k"><span class="tt" tabindex="0" data-tip="SEOmonitor · 599 takip kelimesi · mobil · 11 Ağu 2026. Tahmini organik tıklamanın domainler arasındaki dağılım payı; 843 domain içinde 4. sıra. Görünürlük skorundan farklıdır, tıklama tabanlıdır.">Organic Share of Clicks</span></div><div class="t">4. sıra</div><div class="l3"><i>İlk 3</i><div class="r"><span class="no">1</span><span class='lgo bl-gratis-com'></span><span class="nm">gratis.com</span><em>%15.9</em></div><div class="r"><span class="no">2</span><span class='lgo bl-trendyol-com'></span><span class="nm">trendyol.com</span><em>%15.3</em></div><div class="r"><span class="no">3</span><span class='lgo bl-watsons-com-tr'></span><span class="nm">watsons.com.tr</span><em>%10.2</em></div></div></div>
