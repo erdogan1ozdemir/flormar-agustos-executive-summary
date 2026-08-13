@@ -8,11 +8,11 @@ flormar.com.tr için hazırlanan konsolide SEO ve GEO durum değerlendirmesi.
 
 | # | Bölüm | Kapsam |
 |---|---|---|
-| 01 | Özet | Yedi göstergeli durum tablosu |
+| 01 | Özet | Yedi göstergeli durum tablosu; her satırda ölçüm aracı |
 | 02 | Teknik SEO denetimi | Crawl ve indeksleme, sayfa hızı, içerik ve şablon, structured data başlıklarında tek tabloda güncel durum. |
 | 03 | Site hızı | Sayfa bazlı saha verisi; altı aylık seyir açılır bölümde |
 | 04 | Kategori URL denetimi | Flormar kategori listesi, sitemap ve site navigasyonunun karşılaştırması |
-| 05 | KPI sıralama tablosu | 46 KPI kelimesinde mobil ve masaüstü konum + 30 günlük değişim |
+| 05 | KPI sıralama tablosu | 46 KPI kelimesinde mobil ve masaüstü konum + 30 günlük değişim; sütun başlığından sıralanabilir |
 | 06 | Kategori ve rakip | Altı kategori grubu ve rakip Share of Voice değişimi |
 | 07 | İlk sıra kayıpları | Mayıs'ta ilk sırada olup bugün olmayan 25 kelime, 13'ü canlı SERP ile doğrulanmış |
 | 08 | Content gap | Hacmi 1.000+ olup mobilde ilk 10 dışında kalan 45 kelime, cluster bazlı |
@@ -24,7 +24,7 @@ flormar.com.tr için hazırlanan konsolide SEO ve GEO durum değerlendirmesi.
 
 | Dosya | Açıklama |
 |---|---|
-| `index.html` | Tek sayfalık rapor. Tıklanabilir bölüm navigasyonu, metrik açıklamaları, tablo başına kaynak rozeti; ayrıntı notları açılır bölümlerde. |
+| `index.html` | Tek sayfalık rapor. Tıklanabilir bölüm navigasyonu; her terim ve metrikte hover veya tek dokunuşla açılan açıklama kutusu; tablo başına kaynak rozeti, Özet tablosunda satır bazında ölçüm aracı logosu; KPI, cluster ve ilk sıra kaybı tablolarında sütun başlığından sıralama; ayrıntı notları açılır bölümlerde. |
 | `Flormar-SEO-Durum-Raporu-Agustos-2026.docx` | Raporun Word sürümü |
 | `Flormar-Teknik-SEO-Audit-12082026.xlsx` | URL bazlı bulgu listeleri ve düzeltme önerileri (13 sayfa) |
 | `fonts/` | Bricolage Grotesque ve Outfit (Inbound rapor tipografisi) |
