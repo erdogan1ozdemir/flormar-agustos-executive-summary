@@ -10,7 +10,7 @@ flormar.com.tr için hazırlanan konsolide SEO ve GEO durum değerlendirmesi.
 |---|---|---|
 | 01 | Özet | Sekiz göstergeli durum tablosu; her satırda ölçüm aracı |
 | 02 | Site hızı | Sayfa bazlı saha verisi; altı aylık seyir açılır bölümde |
-| 03 | Kategori URL denetimi | İki kontrol: kategori adresleri eskiye dönüyor mu, navigasyondaki her sayfa sitemap'te mi |
+| 03 | Kategori URL denetimi | Güncel 113 adreslik liste üzerinde dört kontrol: adres doğrudan açılıyor mu, canonical kendi adresini gösteriyor mu, sitemap kapsamında mı, navigasyondaki her sayfa sitemap'te mi |
 | 04 | KPI sıralamaları | 46 KPI kelimesinde mobil konum, 30 günlük değişim ve AI Overview durumu; sütun başlığından sıralanabilir |
 | 05 | Kategori ve rakip | Altı kategori grubu; rakip Share of Clicks ve Visibility karşılaştırması |
 | 06 | İlk sıra değişimi | 30 günde kazanılan 17 ve bırakılan 19 kelime (marka filtreli, GSC ile karşılaştırmalı) + ilk sırayı kime bıraktığımız |
@@ -23,7 +23,7 @@ flormar.com.tr için hazırlanan konsolide SEO ve GEO durum değerlendirmesi.
 
 | Dosya | Açıklama |
 |---|---|
-| `index.html` | Tek sayfalık rapor. Tıklanabilir bölüm navigasyonu; her terim ve metrikte hover veya tek dokunuşla açılan açıklama kutusu; tablo başına kaynak rozeti, Özet tablosunda satır bazında ölçüm aracı logosu; KPI, cluster ve ilk sıra kaybı tablolarında sütun başlığından sıralama; ayrıntı notları açılır bölümlerde. |
+| `index.html` | Tek sayfalık rapor. Tıklanabilir bölüm navigasyonu, mobilde alttan açılan bölüm menüsü; her terim ve metrikte hover veya tek dokunuşla açılan açıklama kutusu; tablo başına kaynak rozeti, Özet tablosunda satır bazında ölçüm aracı logosu; KPI, cluster ve ilk sıra kaybı tablolarında sütun başlığından sıralama; ayrıntı notları açılır bölümlerde. |
 | `Flormar-SEO-Durum-Raporu-Agustos-2026.docx` | Raporun Word sürümü |
 | `Flormar-Teknik-SEO-Audit-12082026.xlsx` | URL bazlı bulgu listeleri ve düzeltme önerileri (14 sayfa) |
 | `fonts/` | Bricolage Grotesque ve Outfit (Inbound rapor tipografisi) |
@@ -41,7 +41,7 @@ flormar.com.tr için hazırlanan konsolide SEO ve GEO durum değerlendirmesi.
 | Ahrefs SERP doğrulaması | 13 kelimede canlı ilk sıra kontrolü. | 12 Ağu 2026 |
 | Google Search Console | Sitemap durumu ve URL denetimi. | 12 Ağu 2026 |
 | Inbound AI görünürlük izleme | 100 aktif prompt; ChatGPT, Gemini ve Google AI Overview üzerinde 505 taranan yanıt. | 1-12 Ağu 2026 |
-| Flormar kategori URL listesi | Flormar ekibinin ilettiği 76 adreslik Excel; her adres tek tek çağrılarak doğrulandı. | 12 Ağu 2026 |
+| Flormar kategori URL listesi | Flormar ekibinin ilettiği 113 adreslik Excel; her adres tek tek çağrılarak HTTP yanıtı ve canonical etiketi doğrulandı. | 13 Ağu 2026 |
 | Doğrudan kontrol | Sunucu HTML'i, robots.txt, llms.txt ve bot erişim testleri. | 12 Ağu 2026 |
 
 ## Kapsam notu
