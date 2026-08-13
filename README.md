@@ -15,14 +15,15 @@ flormar.com.tr için hazırlanan konsolide SEO ve GEO durum değerlendirmesi.
 | 05 | Kategori ve rakip | Altı kategori grubu; rakip Share of Clicks ve Visibility karşılaştırması |
 | 06 | İlk sıra değişimi | 30 günde kazanılan 17 ve bırakılan 19 kelime (marka filtreli, GSC ile karşılaştırmalı) + ilk sırayı kime bıraktığımız |
 | 07 | Content gap | Hacmi 1.000+ olup mobilde ilk 10 dışında kalan 45 kelime, cluster bazlı |
-| 08 | Teknik SEO | Crawl ve indeksleme, sayfa hızı, içerik ve şablon, structured data başlıklarında tek tabloda güncel durum |
-| 09 | GEO / AI görünürlük | Platform görünürlüğü, kategorideki konum, AI Overview Share of Voice ve görünüm metrikleri |
+| 08 | Teknik SEO | Crawl ve indeksleme, sayfa hızı, içerik ve şablon, structured data başlıklarında tek tabloda güncel durum; duruma göre filtrelenebilir ve sıralanabilir |
+| 09 | GEO / AI görünürlük | Platform görünürlüğü, AI Search Share of Voice, prompt klasörü kırılımı (Inbound izleme) ve AI Overview tabloları (SEOmonitor) |
 | 10 | Yöntem ve sözlük | Veri kaynakları, kapsam, ölçüm tarihleri ve terim sözlüğü |
 
 ## Dosyalar
 
 | Dosya | Açıklama |
 |---|---|
+| `promptlar.html` | Inbound AI görünürlük izlemesinde takip edilen 100 promptun tam listesi; klasör sekmeleri ve model bazında marka geçme sayıları. |
 | `index.html` | Tek sayfalık rapor. Tıklanabilir bölüm navigasyonu, mobilde alttan açılan bölüm menüsü; her terim ve metrikte hover veya tek dokunuşla açılan açıklama kutusu; tablo başına kaynak rozeti, Özet tablosunda satır bazında ölçüm aracı logosu; KPI, cluster ve ilk sıra kaybı tablolarında sütun başlığından sıralama; ayrıntı notları açılır bölümlerde. |
 | `Flormar-SEO-Durum-Raporu-Agustos-2026.docx` | Raporun Word sürümü |
 | `Flormar-Teknik-SEO-Audit-12082026.xlsx` | URL bazlı bulgu listeleri ve düzeltme önerileri (14 sayfa) |
