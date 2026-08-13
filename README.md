@@ -8,17 +8,16 @@ flormar.com.tr için hazırlanan konsolide SEO ve GEO durum değerlendirmesi.
 
 | # | Bölüm | Kapsam |
 |---|---|---|
-| 01 | Özet | Yedi göstergeli durum tablosu; her satırda ölçüm aracı |
-| 02 | Teknik SEO denetimi | Crawl ve indeksleme, sayfa hızı, içerik ve şablon, structured data başlıklarında tek tabloda güncel durum. |
-| 03 | Site hızı | Sayfa bazlı saha verisi; altı aylık seyir açılır bölümde |
-| 04 | Kategori URL denetimi | Flormar kategori listesi, sitemap ve site navigasyonunun karşılaştırması |
-| 05 | KPI sıralama tablosu | 46 KPI kelimesinde mobil ve masaüstü konum + 30 günlük değişim; sütun başlığından sıralanabilir |
-| 06 | Kategori ve rakip | Altı kategori grubu ve rakip Share of Voice değişimi |
-| 07 | İlk sıra kayıpları | Mayıs'ta ilk sırada olup bugün olmayan 25 kelime, 13'ü canlı SERP ile doğrulanmış |
-| 08 | Content gap | Hacmi 1.000+ olup mobilde ilk 10 dışında kalan 45 kelime, cluster bazlı |
-| 09 | GEO / AI görünürlük | Platform görünürlüğü, kategorideki konum, AI Overview Share of Voice değişimi |
-| 10 | Öncelik sırası | Dört öncelik ve bir izleme başlığı |
-| 11 | Yöntem ve sözlük | Veri kaynakları, kapsam, ölçüm tarihleri ve terim sözlüğü |
+| 01 | Özet | Sekiz göstergeli durum tablosu; her satırda ölçüm aracı |
+| 02 | Site hızı | Sayfa bazlı saha verisi; altı aylık seyir açılır bölümde |
+| 03 | Kategori URL denetimi | İki kontrol: kategori adresleri eskiye dönüyor mu, navigasyondaki her sayfa sitemap'te mi |
+| 04 | KPI sıralamaları | 46 KPI kelimesinde mobil konum, 30 günlük değişim ve AI Overview durumu; sütun başlığından sıralanabilir |
+| 05 | Kategori ve rakip | Altı kategori grubu; rakip Share of Clicks ve Visibility karşılaştırması |
+| 06 | İlk sıra değişimi | 30 günde kazanılan 17 ve bırakılan 19 kelime (marka filtreli, GSC ile karşılaştırmalı) + ilk sırayı kime bıraktığımız |
+| 07 | Content gap | Hacmi 1.000+ olup mobilde ilk 10 dışında kalan 45 kelime, cluster bazlı |
+| 08 | Teknik SEO | Crawl ve indeksleme, sayfa hızı, içerik ve şablon, structured data başlıklarında tek tabloda güncel durum |
+| 09 | GEO / AI görünürlük | Platform görünürlüğü, kategorideki konum, AI Overview Share of Voice ve görünüm metrikleri |
+| 10 | Yöntem ve sözlük | Veri kaynakları, kapsam, ölçüm tarihleri ve terim sözlüğü |
 
 ## Dosyalar
 
